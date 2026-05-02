@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     environment {
-        AWS_REGION = "ap-south-1"
-        ECR_REPO = "457271242919.dkr.ecr.ap-south-1.amazonaws.com/my-repo"
+        AWS_REGION = "us-east-1"
+        ECR_REPO = "221032952239.dkr.ecr.us-east-1.amazonaws.com/shopping-site"
         IMAGE_TAG = "latest"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/akhileshgopal/demo-app.git'
+                git branch: 'main', url: 'https://github.com/VemulapallyChandana/jenkins-cicd.git'
             }
         }
 
