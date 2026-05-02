@@ -1,22 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME 🎉</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Hub</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #111;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: white;
+      color: #ff416c;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .products {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .products h2 {
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 8px;
+      border: none;
+      background: #ff416c;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Congratulations! 🎉</h1>
-        <p>You have successfully deployed CICD Pipeline using Jenkins</p>
-        <p class="author">This is  a simple html app</p>
-        <button onclick="celebrate()"> Let's Celebrate 🎊</button>
-        <p id="dynamic-message"></p>
-        <div id="confetti" class="hidden"></div>
+
+<header>
+  <h2>Fashion Hub 💃</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Latest Saree Collection</h1>
+  <p>Trendy | Affordable | Quality</p>
+  <a href="#products" class="btn">Shop Now</a>
+</section>
+
+<section id="products" class="products">
+  <h2>Our Products</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/300">
+      <h3>Silk Saree</h3>
+      <p>₹999</p>
+      <button onclick="order()">Order</button>
     </div>
-    <script src="script.js"></script>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300">
+      <h3>Cotton Saree</h3>
+      <p>₹699</p>
+      <button onclick="order()">Order</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300">
+      <h3>Designer Saree</h3>
+      <p>₹1499</p>
+      <button onclick="order()">Order</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="text-align:center; padding:40px;">
+  <h2>Contact Us</h2>
+  <p>Email: yourstore@gmail.com</p>
+  <p>Phone: +91 9876543210</p>
+</section>
+
+<footer>
+  <p>© 2026 Fashion Hub</p>
+</footer>
+
+<script>
+function order() {
+  alert("Order placed! We will contact you.");
+}
+</script>
+
 </body>
 </html>
-
-
